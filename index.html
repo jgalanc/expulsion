@@ -1,16 +1,30 @@
 <!doctype html>
 <html lang="en">
 	<head>
-	<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js" onload="mapboxgl.accessToken = 'pk.eyJ1IjoiZWxwYWlzbGFiIiwiYSI6ImNqbmRmZHB4cjA3MDYzcG80eTkxNThrMmIifQ.Q2nDlfQEHfZDwimIMPZE5g';"></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
 	<link
 		href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css"
 		rel="stylesheet"
 	/>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mapa de Ocupación de Gaza</title>
-		<script type="module" crossorigin src="assets/index.js"></script>
+	<script>
+		// Asegurar que el token se configure después de que mapboxgl esté cargado
+		// pero antes de que se cargue el módulo JavaScript
+		(function() {
+			function setToken() {
+				if (typeof mapboxgl !== 'undefined') {
+					mapboxgl.accessToken = 'pk.eyJ1IjoiZWxwYWlzbGFiIiwiYSI6ImNqbmRmZHB4cjA3MDYzcG80eTkxNThrMmIifQ.Q2nDlfQEHfZDwimIMPZE5g';
+				} else {
+					setTimeout(setToken, 10);
+				}
+			}
+			setToken();
+		})();
+	</script>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mapa de Ocupación de Gaza</title>
+	<script type="module" crossorigin src="assets/index.js"></script>
 		<link rel="stylesheet" crossorigin href="assets/index.css">
 	</head>
 
@@ -34,6 +48,18 @@
 
 			a:hover {
 				color: var(--c-black);
+			}
+
+			/* Asegurar que el contenedor del mapa tenga dimensiones */
+			#scroll {
+				width: 100%;
+				height: 100vh;
+				position: relative;
+			}
+
+			/* Asegurar que el canvas de Mapbox sea visible */
+			#scroll canvas {
+				display: block !important;
 			}
 		</style>
 		<div class="dev">
