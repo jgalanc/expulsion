@@ -1,52 +1,56 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<script src="//ep00.epimg.net/infografias/js/mapbox/mapbox-gl-js/1.7.0/mapbox-gl.js"></script>
-		<link
-			href="//ep00.epimg.net/infografias/css/mapbox/mapbox-gl-js/1.7.0/mapbox-gl.css"
-			rel="stylesheet"
-		/>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/infografias/2025/08/ocupacion_gaza/scroll/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>svelte-scroller-5 TODOS</title>
-		<script type="module" crossorigin src="/infografias/2025/08/ocupacion_gaza/scroll/assets/index.js"></script>
-		<link rel="stylesheet" crossorigin href="/infografias/2025/08/ocupacion_gaza/scroll/assets/index.css">
-	</head>
+<head>
+    <!-- Mapbox desde CDN oficial (HTTPS obligatorio para GitHub Pages) -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
 
-	<body>
-		<style>
-			.dev {
-				background: gold;
-				margin: 0;
-				padding: 0;
-				font-family: var(--sans);
-				color: var(--c-black);
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-			}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svelte-scroller-5 TODOS</title>
 
-			a {
-				font-weight: 800;
-				color: var(--c-black);
-				text-decoration: inherit;
-			}
+    <!-- Rutas locales corregidas -->
+    <script type="module" crossorigin src="assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index.css">
 
-			a:hover {
-				color: var(--c-black);
-			}
-		</style>
-		<div class="dev">
-			<a href="/articulo.html" target="_blank" rel="noopener noreferrer">Artículo</a>
-			<a href="/especial.html" target="_blank" rel="noopener noreferrer">Especial</a>
-		</div>
-		<div id="app"></div>
-		<div id="lead"></div>
-		<div id="sv1"></div>
-		<div id="sv2"></div>
-		<div id="sv3"></div>
-		<div id="sv4"></div>
-		<div id="sv5"></div>
-		<div id="sv6"></div>
-	</body>
+</head>
+
+<body>
+<style>
+    .dev {
+        background: gold;
+        margin: 0;
+        padding: 0;
+        font-family: var(--sans);
+        color: var(--c-black);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    a {
+        font-weight: 800;
+        color: var(--c-black);
+        text-decoration: inherit;
+    }
+
+    a:hover {
+        color: var(--c-black);
+    }
+</style>
+
+<div class="dev">
+    <a href="articulo.html" target="_blank" rel="noopener noreferrer">Artículo</a>
+    <a href="especial.html" target="_blank" rel="noopener noreferrer">Especial</a>
+</div>
+
+<div id="app"></div>
+<div id="lead"></div>
+<div id="sv1"></div>
+<div id="sv2"></div>
+<div id="sv3"></div>
+<div id="sv4"></div>
+<div id="sv5"></div>
+<div id="sv6"></div>
+
+</body>
 </html>
