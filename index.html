@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="en">
 	<head>
-	<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
-	<link
-		href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css"
-		rel="stylesheet"
-	/>
+		<meta charset="UTF-8" />
+		<!-- Forzar que todas las rutas relativas (JS, CSS, imágenes, videos) cuelguen de /expulsion/ -->
+		<base href="/expulsion/">
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+			rel="stylesheet"
+		/>
 	<script>
 		// Asegurar que el token se configure después de que mapboxgl esté cargado
 		// pero antes de que se cargue el módulo JavaScript
@@ -20,7 +23,6 @@
 			setToken();
 		})();
 	</script>
-	<meta charset="UTF-8" />
 	<link rel="icon" type="image/svg+xml" href="vite.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Mapa de Ocupación de Gaza</title>
